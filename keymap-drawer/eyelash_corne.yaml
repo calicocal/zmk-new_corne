@@ -14,19 +14,19 @@ layers:
   - P
   - $$mdi:alpha-w-box$$
   - '&key_repeat'
-  - A
-  - S
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - D
-  - F
+  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
   - H
-  - J
+  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
   - K
-  - L
-  - {t: ;, s: ':'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:apple-keyboard-command$$', h: ;}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
   - Z
@@ -34,7 +34,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:keyboard-space$$
+  - PLAY PAUSE
   - $$mdi:arrow-down-bold$$
   - N
   - M
