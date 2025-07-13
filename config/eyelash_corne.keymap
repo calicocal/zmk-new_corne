@@ -4,8 +4,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 /*
@@ -78,10 +76,10 @@
         num_layer {
             display-name = "NUMBER";
             bindings = <
-&kp LC(C)  &td0          &td0          &td0            &td0              &td0                                  &mmv MOVE_UP                     &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS  &kp BSPC
-&kp LC(X)  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &td0                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp TAB
-&kp LC(V)  &td0          &td0          &td0            &td0              &td0    &kp C_MUTE                    &mmv MOVE_DOWN                   &kp SPACE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp ENTER
-                                       &td0            &td0              &trans                                                                 &kp PERIOD    &kp N0        &kp COMMA
+&kp LC(C)  &td0          &kp LS(LC(NUMBER_3))      &kp LC(LS(NUMBER_2))      &kp LC(LS(NUMBER_1))      &td0                                  &mmv MOVE_UP                     &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS  &kp BSPC
+&kp LC(X)  &kp LEFT_GUI  &kp LEFT_ALT              &kp LEFT_SHIFT            &kp LEFT_CONTROL          &td0                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp TAB
+&kp LC(V)  &td0          &kp LS(LA(LC(NUMBER_3)))  &kp LA(LC(LS(NUMBER_2)))  &kp LC(LA(LS(NUMBER_1)))  &td0    &kp C_MUTE                    &mmv MOVE_DOWN                   &kp SPACE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp ENTER
+                                                   &td0                      &td0                      &trans                                                                 &kp PERIOD    &kp N0        &kp COMMA
             >;
 
             sensor-bindings = <&scroll_encoder>;
