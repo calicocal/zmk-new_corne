@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - $$mdi:keyboard-tab$$
@@ -51,9 +52,9 @@ layers:
   NUMBER:
   - Ctl+C
   - '&td0'
-  - '&td0'
-  - '&td0'
-  - '&td0'
+  - Sft+Ctl+3
+  - Ctl+Sft+2
+  - Ctl+Sft+1
   - '&td0'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: /, s: '?'}
@@ -79,9 +80,9 @@ layers:
   - $$mdi:keyboard-tab$$
   - Ctl+V
   - '&td0'
-  - '&td0'
-  - '&td0'
-  - '&td0'
+  - Meh+3
+  - Meh+2
+  - Meh+1
   - '&td0'
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
