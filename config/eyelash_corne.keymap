@@ -113,7 +113,7 @@
             bindings = <
 &none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &none         &soft_off  &none  &none  &none  &none  &bootloader
 &none           &none         &none         &none         &none         &none                           &none  &none  &none  &none      &none  &none  &none  &none  &none
-&studio_unlock  &none         &none         &none         &none         &none         &bt BT_CLR_ALL           &none         &none      &none  &none  &none  &none  &none
+&studio_unlock  &none         &none         &none         &none         &kp A         &bt BT_CLR_ALL           &none         &kp B      &none  &none  &none  &none  &none
                                             &none         &none         &none                                                &none      &none  &none
             >;
 
