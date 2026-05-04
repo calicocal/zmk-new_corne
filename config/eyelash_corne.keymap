@@ -32,15 +32,60 @@
             label = "5 backspace";
         };
 
-        homerow_mods: homerow_mods {
+        homerow_mods_L: homerow_mods_L {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HOMEROW_MODS_L";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
+            hold-while-undecided;
+            hold-trigger-key-positions = <7 9 10 11 12 24 25 26 27 38 39 40 41 47 7 8 22 23 36 37 46 47 45>;
+            hold-trigger-on-release;
+        };
+
+        homerow_mods_R: homerow_mods_R {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_R";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            hold-while-undecided;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 3 44>;
+        };
+
+        homerow_mods_Shift_L: homerow_mods_Shift_L {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_SHIFT_L";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            hold-while-undecided;
+            hold-trigger-key-positions = <7 9 10 11 12 24 25 26 27 38 39 40 41 47 7 8 22 23 36 37 46 47 45>;
+            hold-trigger-on-release;
+        };
+
+        homerow_mods_Shift_R: homerow_mods_Shift_R {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_SHIFT_R";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            hold-while-undecided;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 3 44>;
         };
     };
 
@@ -64,10 +109,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB      &kp Q                     &kp W                     &kp E                  &kp R                         &kp T                                    &kp UP                &kp Y        &kp U                         &kp I                  &kp O                     &kp P                        &caps_word
-&key_repeat  &homerow_mods LEFT_GUI A  &homerow_mods LEFT_ALT S  &kp D                  &homerow_mods LEFT_CONTROL F  &kp G                          &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &homerow_mods LEFT_CONTROL J  &kp K                  &homerow_mods LEFT_ALT L  &homerow_mods LEFT_GUI SEMI  &kp SQT
-&kp LCTRL    &kp Z                     &kp X                     &kp C                  &kp V                         &kp B      &kp K_PLAY_PAUSE              &kp DOWN              &kp N        &kp M                         &kp COMMA              &kp DOT                   &kp FSLH                     &kp UNDER
-                                                                 &mt LEFT_SHIFT DELETE  &td0                          &lt 1 TAB                                                      &lt 3 ENTER  &lt 2 SPACE                   &mt LEFT_SHIFT ESCAPE
+&kp ENTER    &kp Q                       &kp W                       &kp E                               &kp R                           &kp T                                    &kp UP                &kp Y        &kp U                           &kp I                                &kp O                       &kp P                          &caps_word
+&key_repeat  &homerow_mods_L LEFT_GUI A  &homerow_mods_L LEFT_ALT S  &homerow_mods_Shift_L D LEFT_SHIFT  &homerow_mods_L LEFT_CONTROL F  &kp G                          &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &homerow_mods_R LEFT_CONTROL J  &homerow_mods_Shift_R K RIGHT_SHIFT  &homerow_mods_R LEFT_ALT L  &homerow_mods_R LEFT_GUI SEMI  &kp SQT
+&kp LCTRL    &kp Z                       &kp X                       &kp C                               &kp V                           &kp B      &kp K_PLAY_PAUSE              &kp DOWN              &kp N        &kp M                           &kp COMMA                            &kp DOT                     &kp FSLH                       &kp UNDER
+                                                                     &mt LEFT_SHIFT DELETE               &td0                            &lt 1 TAB                                                      &lt 3 ENTER  &lt 2 SPACE                     &mt LEFT_SHIFT ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -113,7 +158,7 @@
             bindings = <
 &none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &none         &soft_off  &none  &none  &none  &none  &bootloader
 &none           &none         &none         &none         &none         &none                           &none  &none  &none  &none      &none  &none  &none  &none  &none
-&studio_unlock  &none         &none         &none         &none         &kp A         &bt BT_CLR_ALL           &none         &kp B      &none  &none  &none  &none  &none
+&studio_unlock  &none         &none         &none         &none         &none         &bt BT_CLR_ALL           &none         &none      &none  &none  &none  &none  &none
                                             &none         &none         &none                                                &none      &none  &none
             >;
 
@@ -129,6 +174,15 @@
             >;
 
             label = "NAV";
+        };
+
+        Gaming {
+            bindings = <
+&kp TAB         &kp NUMBER_1  &kp Q   &kp W         &kp E      &kp R                               &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp NUMBER_2  &kp A   &kp S         &kp D      &kp F                       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE      &kp NUMBER_3  &trans  &trans        &trans     &trans            &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                      &kp LEFT_ALT  &kp SPACE  &kp LEFT_CONTROL                                    &trans  &trans  &trans
+            >;
         };
     };
 };
